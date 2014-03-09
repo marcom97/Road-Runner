@@ -25,6 +25,7 @@
 		A931004018CC4A58006BE18E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A931001818CC4A57006BE18E /* UIKit.framework */; };
 		A931004818CC4A58006BE18E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A931004618CC4A58006BE18E /* InfoPlist.strings */; };
 		A931004A18CC4A58006BE18E /* Road_RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A931004918CC4A58006BE18E /* Road_RunnerTests.m */; };
+		A931005518CC4EC4006BE18E /* RoadRunnerGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A931005418CC4EC4006BE18E /* RoadRunnerGameScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		A931004518CC4A58006BE18E /* Road RunnerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Road RunnerTests-Info.plist"; sourceTree = "<group>"; };
 		A931004718CC4A58006BE18E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A931004918CC4A58006BE18E /* Road_RunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Road_RunnerTests.m; sourceTree = "<group>"; };
+		A931005318CC4EC4006BE18E /* RoadRunnerGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadRunnerGameScene.h; sourceTree = "<group>"; };
+		A931005418CC4EC4006BE18E /* RoadRunnerGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadRunnerGameScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				A931002F18CC4A58006BE18E /* RoadRunnerViewController.m */,
 				A931003118CC4A58006BE18E /* RoadRunnerMyScene.h */,
 				A931003218CC4A58006BE18E /* RoadRunnerMyScene.m */,
+				A931005318CC4EC4006BE18E /* RoadRunnerGameScene.h */,
+				A931005418CC4EC4006BE18E /* RoadRunnerGameScene.m */,
 				A931003418CC4A58006BE18E /* Spaceship.png */,
 				A931003618CC4A58006BE18E /* Images.xcassets */,
 				A931001D18CC4A58006BE18E /* Supporting Files */,
@@ -269,6 +274,7 @@
 			files = (
 				A931002718CC4A58006BE18E /* RoadRunnerAppDelegate.m in Sources */,
 				A931003018CC4A58006BE18E /* RoadRunnerViewController.m in Sources */,
+				A931005518CC4EC4006BE18E /* RoadRunnerGameScene.m in Sources */,
 				A931003318CC4A58006BE18E /* RoadRunnerMyScene.m in Sources */,
 				A931002318CC4A58006BE18E /* main.m in Sources */,
 			);
@@ -491,6 +497,7 @@
 				A931004F18CC4A58006BE18E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A931005018CC4A58006BE18E /* Build configuration list for PBXNativeTarget "Road RunnerTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +506,7 @@
 				A931005218CC4A58006BE18E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

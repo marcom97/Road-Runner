@@ -7,23 +7,24 @@
 //
 
 #import "RoadRunnerMyScene.h"
+#import "RoadRunnerGameScene.h"
 
 @implementation RoadRunnerMyScene
 
--(id)initWithSize:(CGSize)size {    
+-(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        playLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
+        playLabel.text = @"Play";
+        playLabel.fontSize = 30;
+        playLabel.position = CGPointMake(CGRectGetMidX(self.frame),
+                                         CGRectGetMidY(self.frame));
         
-        [self addChild:myLabel];
+        [self addChild:playLabel];
     }
     return self;
 }
@@ -34,15 +35,11 @@
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
+        if ([playLabel containsPoint:location])
+        {
+            SKScene *gameScene = [RoadRunnerGameScene sceneWithSize:self.size];
+            [self.scene.view presentScene:gameScene];
+        }
     }
 }
 
