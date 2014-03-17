@@ -14,16 +14,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Configure the view.
-    SKView *skView = (SKView *)self.view;
-    
+    SKView * skView = (SKView *)self.view;
+
     // Create and configure the scene.
     SKScene * menuScene = [RoadRunnerMyScene sceneWithSize:skView.bounds.size];
     menuScene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
     [skView presentScene:menuScene];
+    
 }
 
 - (BOOL)shouldAutorotate
