@@ -89,8 +89,9 @@ static inline CGFloat roundFloatToTwoDecimalPlaces(CGFloat num) { return floorf(
             } else continue;
             
             // create the duplicate and insert both at their proper locations.
+            node.size = size;
             node.zPosition = self.zPosition - (zPos + (zPos * bgNumber));
-            node.position = CGPointMake(0, self.size.height);
+            node.position = CGPointMake(0, 0);
             SKSpriteNode * clonedNode = [node copy];
             CGFloat clonedPosX = node.position.x, clonedPosY = node.position.y;
             switch (direction) { // calculate clone's position
@@ -98,7 +99,7 @@ static inline CGFloat roundFloatToTwoDecimalPlaces(CGFloat num) { return floorf(
                     clonedPosY = 0;
                     break;
                 case kPBParallaxBackgroundDirectionDown:
-                    clonedPosY = node.size.height * 2;
+                    clonedPosY = node.size.height;
                     break;
                 case kPBParallaxBackgroundDirectionRight:
                     clonedPosX = - node.size.width;
@@ -160,8 +161,8 @@ static inline CGFloat roundFloatToTwoDecimalPlaces(CGFloat num) { return floorf(
             case kPBParallaxBackgroundDirectionDown:
                 newBgY -= speed;
                 newCbgY -= speed;
-                if (newBgY <= 0) newBgY = newCbgY + cBg.size.height - kParallaxBackgroundAntiFlickeringAdjustment;
-                if (newCbgY <= 0) newCbgY = newBgY + bg.size.height - kParallaxBackgroundAntiFlickeringAdjustment;
+                if (newBgY <= -CGRectGetMaxY(self.frame)-CGRectGetMidY(self.frame)) newBgY = newCbgY + cBg.size.height - kParallaxBackgroundAntiFlickeringAdjustment;
+                if (newCbgY <=  -CGRectGetMaxY(self.frame)-CGRectGetMidY(self.frame)) newCbgY = newBgY + bg.size.height - kParallaxBackgroundAntiFlickeringAdjustment;
 
                 break;
             case kPBParallaxBackgroundDirectionRight:

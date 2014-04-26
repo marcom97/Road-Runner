@@ -14,15 +14,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    SKView * skView = (SKView *)self.view;
+}
 
-    // Create and configure the scene.
-    SKScene * menuScene = [RoadRunnerMyScene sceneWithSize:skView.bounds.size];
-    menuScene.scaleMode = SKSceneScaleModeAspectFill;
+- (void)viewWillLayoutSubviews
+{
     
-    // Present the scene.
-    [skView presentScene:menuScene];
+    [super viewWillLayoutSubviews];
     
+    // Configure the view.
+    SKView * skView = (SKView *)self.view;
+    
+    //set the view only once, if the device orientation is
+    //rotating viewWillLayoutSubviews will be called again
+    if ( !skView.scene )
+    {
+        // Create and configure the scene.
+        SKScene * menuScene = [RoadRunnerMyScene sceneWithSize:skView.bounds.size];
+        menuScene.scaleMode = SKSceneScaleModeAspectFill;
+        
+        // Present the scene.
+        [skView presentScene:menuScene];
+    }
 }
 
 - (BOOL)shouldAutorotate

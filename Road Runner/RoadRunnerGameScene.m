@@ -20,16 +20,9 @@
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size])
     {
-        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"Background@2x-ipad.tif"];
-        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMaxY(self.frame));
-        SKSpriteNode *backgroundCopy = [SKSpriteNode spriteNodeWithImageNamed:@"Background@2x-ipad.tif"];
-        [self addChild:background];
-        
-        SKAction *scrollingBackground = [SKAction moveBy:CGVectorMake(0, -5) duration:1];
-        [background runAction:[SKAction repeatActionForever:scrollingBackground]];
         
         NSArray * imageNames = @[@"Background@2x-ipad.tif"];
-        PBParallaxScrolling * parallax = [[PBParallaxScrolling alloc] initWithBackgrounds:imageNames size:size direction:kPBParallaxBackgroundDirectionDown fastestSpeed:3 andSpeedDecrease:0];
+        PBParallaxScrolling * parallax = [[PBParallaxScrolling alloc] initWithBackgrounds:imageNames size:size direction:kPBParallaxBackgroundDirectionDown fastestSpeed:6 andSpeedDecrease:0];
         self.parallaxBackground = parallax;
         [self addChild:parallax];
         

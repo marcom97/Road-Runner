@@ -27,6 +27,8 @@
 		A931004A18CC4A58006BE18E /* Road_RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A931004918CC4A58006BE18E /* Road_RunnerTests.m */; };
 		A931005518CC4EC4006BE18E /* RoadRunnerGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A931005418CC4EC4006BE18E /* RoadRunnerGameScene.m */; };
 		A96D868018D59D8E00A9CB4C /* Background@2x-ipad.tif in Resources */ = {isa = PBXBuildFile; fileRef = A96D867F18D59D8E00A9CB4C /* Background@2x-ipad.tif */; };
+		A9D903CC190B5D27003A398A /* RoadRunnerCar.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D903CB190B5D27003A398A /* RoadRunnerCar.m */; };
+		A9D903CE190B777F003A398A /* carRed.tif in Resources */ = {isa = PBXBuildFile; fileRef = A9D903CD190B777E003A398A /* carRed.tif */; };
 		A9DCEC7D18D6828C00D4F435 /* PBParallaxScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DCEC7C18D6828C00D4F435 /* PBParallaxScrolling.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,9 @@
 		A931005318CC4EC4006BE18E /* RoadRunnerGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadRunnerGameScene.h; sourceTree = "<group>"; };
 		A931005418CC4EC4006BE18E /* RoadRunnerGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadRunnerGameScene.m; sourceTree = "<group>"; };
 		A96D867F18D59D8E00A9CB4C /* Background@2x-ipad.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Background@2x-ipad.tif"; sourceTree = "<group>"; };
+		A9D903CA190B5D27003A398A /* RoadRunnerCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadRunnerCar.h; sourceTree = "<group>"; };
+		A9D903CB190B5D27003A398A /* RoadRunnerCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadRunnerCar.m; sourceTree = "<group>"; };
+		A9D903CD190B777E003A398A /* carRed.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = carRed.tif; sourceTree = "<group>"; };
 		A9DCEC7B18D6828C00D4F435 /* PBParallaxScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBParallaxScrolling.h; sourceTree = "<group>"; };
 		A9DCEC7C18D6828C00D4F435 /* PBParallaxScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBParallaxScrolling.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,9 +146,12 @@
 				A931003218CC4A58006BE18E /* RoadRunnerMyScene.m */,
 				A931005318CC4EC4006BE18E /* RoadRunnerGameScene.h */,
 				A931005418CC4EC4006BE18E /* RoadRunnerGameScene.m */,
+				A9D903CA190B5D27003A398A /* RoadRunnerCar.h */,
+				A9D903CB190B5D27003A398A /* RoadRunnerCar.m */,
 				A9DCEC7B18D6828C00D4F435 /* PBParallaxScrolling.h */,
 				A9DCEC7C18D6828C00D4F435 /* PBParallaxScrolling.m */,
 				A96D867F18D59D8E00A9CB4C /* Background@2x-ipad.tif */,
+				A9D903CD190B777E003A398A /* carRed.tif */,
 				A931003418CC4A58006BE18E /* Spaceship.png */,
 				A931003618CC4A58006BE18E /* Images.xcassets */,
 				A931001D18CC4A58006BE18E /* Supporting Files */,
@@ -263,6 +271,7 @@
 				A931002A18CC4A58006BE18E /* Main_iPhone.storyboard in Resources */,
 				A96D868018D59D8E00A9CB4C /* Background@2x-ipad.tif in Resources */,
 				A931002118CC4A58006BE18E /* InfoPlist.strings in Resources */,
+				A9D903CE190B777F003A398A /* carRed.tif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +294,7 @@
 				A931002718CC4A58006BE18E /* RoadRunnerAppDelegate.m in Sources */,
 				A931003018CC4A58006BE18E /* RoadRunnerViewController.m in Sources */,
 				A931005518CC4EC4006BE18E /* RoadRunnerGameScene.m in Sources */,
+				A9D903CC190B5D27003A398A /* RoadRunnerCar.m in Sources */,
 				A931003318CC4A58006BE18E /* RoadRunnerMyScene.m in Sources */,
 				A931002318CC4A58006BE18E /* main.m in Sources */,
 			);
