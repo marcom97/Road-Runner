@@ -8,7 +8,13 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "PBParallaxScrolling.h"
+#import "RoadRunnerCar.h"
 
 @interface RoadRunnerGameScene : SKScene
+{
+    SKSpriteNode *background;
+    SKSpriteNode *backgroundCopy;
+}
+
 
 @end
