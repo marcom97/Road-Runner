@@ -7,13 +7,19 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "PBParallaxScrolling.h"
 #import "RoadRunnerCar.h"
 
-@interface RoadRunnerGameScene : SKScene
+@interface RoadRunnerGameScene : SKScene <SKPhysicsContactDelegate>
 {
     SKSpriteNode *background;
     SKSpriteNode *backgroundCopy;
+    SKSpriteNode *player;
+    RoadRunnerCar *car;
+    int count;
+    BOOL start;
+    CGPoint location1;
+    int currentPosition;
+
 }
 
 
